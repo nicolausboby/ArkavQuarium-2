@@ -4,14 +4,17 @@
 package Animal;
 
 import Location.*;
+import Movable.*;
+import Coin.*;
 
 /**
  *
  * @author Uslaconi
  */
-public abstract class Fish {
+public abstract class Fish implements Movable{
     private static final int INTERVAL_TO_DIE = 8000;
     private static final int INTERVAL_TO_FULL = 10000;
+    public static final int SPEED_FISH_NORMAL = 87;
     
     private double directionTo;
     private boolean isFull;
@@ -38,7 +41,14 @@ public abstract class Fish {
     public abstract Coin generateCoin();
     public abstract void Eat();
     
-    //public void Move(double a, double b)
+    /*public void Move(double degree, double deltatime){
+        if (this.directionTo == -1 || !this.getIsFull()){
+            directionTo = degree;
+        }
+        boolean isInsideX = ((this.location.getX() + this.SPEED_FISH_NORMAL * deltatime));
+        bool isInsideX = ((location.x + int(SPEED_FISH_NORMAL * deltatime * cos(directionTo * (M_PI / 180)))) <= SCREEN_WIDTH - 40) && ((location.x + int(SPEED_FISH_NORMAL * deltatime * cos(directionTo * (M_PI / 180)))) >= 40);
+        bool isInsideY = ((location.y + int(SPEED_FISH_NORMAL * deltatime * sin(directionTo * (M_PI / 180)))) <= SCREEN_HEIGHT - 40) && ((location.y + int(SPEED_FISH_NORMAL * deltatime * sin(directionTo * (M_PI / 180)))) >= 115); 
+    }*/
     
     public void setIsFull(boolean isf) {
         this.isFull = isf;
