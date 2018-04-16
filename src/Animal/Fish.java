@@ -11,7 +11,7 @@ import Coin.*;
  *
  * @author Uslaconi
  */
-public abstract class Fish implements Movable{
+public abstract class Fish extends Thread implements Movable {
     private static final int INTERVAL_TO_DIE = 8000;
     private static final int INTERVAL_TO_FULL = 10000;
     public static final int SPEED_FISH_NORMAL = 87;
@@ -23,6 +23,24 @@ public abstract class Fish implements Movable{
     private int statePic;
     private int ID;
     private double hungerTime;
+    private Thread t;
+    
+    public Fish(int id) {
+        this.ID = id;
+    }
+    
+    @Override
+    public void run(){
+        
+    }
+    
+    @Override
+    public void start() {
+        if (t == null) {
+            t = new Thread (this, String.valueOf(this.ID));
+            t.start ();
+        }
+    }
     
     public double getTimeDirection() {
         return this.timeDirection;
@@ -41,14 +59,15 @@ public abstract class Fish implements Movable{
     public abstract Coin generateCoin();
     public abstract void Eat();
     
-    /*public void Move(double degree, double deltatime){
+    @Override
+    public void Move(double degree, double deltatime){
         if (this.directionTo == -1 || !this.getIsFull()){
             directionTo = degree;
         }
-        boolean isInsideX = ((this.location.getX() + this.SPEED_FISH_NORMAL * deltatime));
-        bool isInsideX = ((location.x + int(SPEED_FISH_NORMAL * deltatime * cos(directionTo * (M_PI / 180)))) <= SCREEN_WIDTH - 40) && ((location.x + int(SPEED_FISH_NORMAL * deltatime * cos(directionTo * (M_PI / 180)))) >= 40);
-        bool isInsideY = ((location.y + int(SPEED_FISH_NORMAL * deltatime * sin(directionTo * (M_PI / 180)))) <= SCREEN_HEIGHT - 40) && ((location.y + int(SPEED_FISH_NORMAL * deltatime * sin(directionTo * (M_PI / 180)))) >= 115); 
-    }*/
+        /*boolean isInsideX = ((this.location.getX() + this.SPEED_FISH_NORMAL * ));
+        bool isInsideX = ((location.x + int(SPEED_FISH_NORMAL *  * cos(directionTo * (M_PI / 180)))) <= SCREEN_WIDTH - 40) && ((location.x + int(SPEED_FISH_NORMAL * deltatime * cos(directionTo * (M_PI / 180)))) >= 40);
+        bool isInsideY = ((location.y + int(SPEED_FISH_NORMAL * deltatime * sin(directionTo * (M_PI / 180)))) <= SCREEN_HEIGHT - 40) && ((location.y + int(SPEED_FISH_NORMAL * deltatime * sin(directionTo * (M_PI / 180)))) >= 115); */
+    }
     
     public void setIsFull(boolean isf) {
         this.isFull = isf;
