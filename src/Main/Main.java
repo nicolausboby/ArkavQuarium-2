@@ -1,5 +1,7 @@
 package Main;
 
+import Animal.*;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javafx.application.Platform;
