@@ -8,7 +8,7 @@ package Movable;
  *
  * @author asus
  */
-public class Deltatime implements Runnable{
+public class Deltatime{
     //Get the system time
     long lastTime = System.nanoTime();
     //Specify how many seconds there are in a minute as a double
@@ -18,22 +18,12 @@ public class Deltatime implements Runnable{
     double ns = 1000000000 / ticks;    
     double delta = 0;
     
-    private Thread t;
-    
-    public void start () {
-         if (t == null) {
-         t = new Thread (this);
-         t.start ();
-      }
-    }
-    
-    @Override
-    public void run(){
-        while(true){
+    public Deltatime(){
+        while (true){
             //Update the time
             long now = System.nanoTime();
             //calculate change in time since last known time
-            delta += (now - lastTime) / ns;
+            this.delta += (now - lastTime) / ns;
             //update last known time    
             lastTime = now;
             //continue while delta is less than or equal to 1
