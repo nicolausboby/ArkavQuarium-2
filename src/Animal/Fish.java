@@ -6,6 +6,8 @@ package Animal;
 import Location.*;
 import Movable.*;
 import Coin.*;
+import java.util.Random;
+import static Main.Main.*;
 
 /**
  *
@@ -64,9 +66,17 @@ public abstract class Fish extends Thread implements Movable {
         if (this.directionTo == -1 || !this.getIsFull()){
             directionTo = degree;
         }
-        /*boolean isInsideX = ((this.location.getX() + this.SPEED_FISH_NORMAL * ));
-        bool isInsideX = ((location.x + int(SPEED_FISH_NORMAL *  * cos(directionTo * (M_PI / 180)))) <= SCREEN_WIDTH - 40) && ((location.x + int(SPEED_FISH_NORMAL * deltatime * cos(directionTo * (M_PI / 180)))) >= 40);
-        bool isInsideY = ((location.y + int(SPEED_FISH_NORMAL * deltatime * sin(directionTo * (M_PI / 180)))) <= SCREEN_HEIGHT - 40) && ((location.y + int(SPEED_FISH_NORMAL * deltatime * sin(directionTo * (M_PI / 180)))) >= 115); */
+        boolean isInsideX = ((this.location.getX() + this.SPEED_FISH_NORMAL * deltatime * Math.cos(this.directionTo * (Math.PI / 180))) <= JFXPANEL_WIDTH_INT - 40) && ((this.location.getX() + this.SPEED_FISH_NORMAL * deltatime * Math.cos(this.directionTo * (Math.PI / 180))) >= 40);
+        boolean isInsideY = ((this.location.getY() + this.SPEED_FISH_NORMAL * deltatime * Math.sin(this.directionTo * (Math.PI / 180))) <= JFXPANEL_HEIGHT_INT - 40) && ((this.location.getY() + this.SPEED_FISH_NORMAL * deltatime * Math.sin(this.directionTo * (Math.PI / 180))) >= 40);
+        while (!(isInsideX && isInsideY)){
+            Random rand = new Random();
+            directionTo = rand.nextInt(360);
+            isInsideX = ((this.location.getX() + this.SPEED_FISH_NORMAL * deltatime * Math.cos(this.directionTo * (Math.PI / 180))) <= JFXPANEL_WIDTH_INT - 40) && ((this.location.getX() + this.SPEED_FISH_NORMAL * deltatime * Math.cos(this.directionTo * (Math.PI / 180))) >= 40);
+            isInsideY = ((this.location.getY() + this.SPEED_FISH_NORMAL * deltatime * Math.sin(this.directionTo * (Math.PI / 180))) <= JFXPANEL_HEIGHT_INT - 40) && ((this.location.getY() + this.SPEED_FISH_NORMAL * deltatime * Math.sin(this.directionTo * (Math.PI / 180))) >= 40);
+        }
+
+    this.location.setX((int)(this.location.getX() + this.SPEED_FISH_NORMAL * deltatime * Math.cos(this.directionTo * (Math.PI / 180)))); 
+    this.location.setY((int)(this.location.getY() + this.SPEED_FISH_NORMAL * deltatime * Math.sin(this.directionTo * (Math.PI / 180)))); 
     }
     
     public void setIsFull(boolean isf) {

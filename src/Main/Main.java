@@ -18,8 +18,8 @@ import javax.swing.UIManager;
 
 public class Main extends JApplet {
     
-    private static final int JFXPANEL_WIDTH_INT = 600;
-    private static final int JFXPANEL_HEIGHT_INT = 800;
+    public static int JFXPANEL_WIDTH_INT = 600;
+    public static int JFXPANEL_HEIGHT_INT = 800;
     private static JFXPanel fxContainer;
 
     /**
