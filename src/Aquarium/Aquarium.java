@@ -7,6 +7,7 @@ package Aquarium;
 import java.util.*;
 import Animal.*;
 import Coin.*;
+import Food.*;
 
 /**
  *
@@ -19,7 +20,7 @@ public class Aquarium {
     Snail snail;
 
     public Aquarium() {
-        this.Fishes = new ArrayList<>();
+        
     }
     
     public Snail getSnail(){
