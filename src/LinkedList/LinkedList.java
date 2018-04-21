@@ -6,7 +6,7 @@ package LinkedList;
  * @param <E> Generic element.
  */
 
-public class LinkedList<E extends Comparable<E>>{
+public class LinkedList<E>{
   private Node<E> Head;
   private int currentSize;
 
@@ -61,7 +61,7 @@ public class LinkedList<E extends Comparable<E>>{
      * @param idx index of the element.
      */
     public void remove(int idx){
-    if (idx < currentSize){
+    if (idx < currentSize && Head.getNext() != null){
       for (int i = 0; i < idx; i++){
         Head = Head.getNext();
       }
@@ -75,6 +75,9 @@ public class LinkedList<E extends Comparable<E>>{
       while (Head.getPrev() != null){
         Head = Head.getPrev();
       }
+      currentSize--;
+    } else if (idx < currentSize && Head.getNext() == null){
+      Head = null;
       currentSize--;
     }
   }
@@ -114,7 +117,7 @@ public class LinkedList<E extends Comparable<E>>{
       try{
         node = (Node<E>) Head.clone();
         for (int i = 0; i < currentSize; i++){
-          if (node.compareTo(otherNode) == 0){
+          if (node.equals(otherNode)){
             return i;
           }
           node = node.getNext();
@@ -166,7 +169,7 @@ public class LinkedList<E extends Comparable<E>>{
       System.out.println("\n--------INI TEST CASE 2----------");
       //Gimana kalau class lain(?) bukan Integer, Float, ataupun Double
       //Solusinya buat kelas yang mengimplementasikan interface Comparable
-      class Fish implements Comparable<Fish>{ //harus implement comparable
+      class Fish{ //harus implement comparable
         public int ID;
         private int x;
         private int y;
@@ -177,15 +180,15 @@ public class LinkedList<E extends Comparable<E>>{
         public int getY(){return y;}
         public void setX(int x){this.x = x;}
         public void setY(int y){this.y = y;}
-
+        
+        /**
+         * Update terbaru: Harus overriding equals, tidak jadi memakai interface Comparable
+         * Kegunaan      : Untuk mengetahui apakah ikan yang ingin dicari, apakah ada di LinkedList atau tidak dengan method equals
+         */
         @Override
-        public int compareTo(Fish fish){
-          if (ID == fish.ID)
-            return 0;
-          else if (ID > fish.ID)
-            return 1;
-          else
-            return -1;
+        public boolean equals(Object obj){
+            final Fish other = (Fish) obj;
+            return other.ID == ID && x == other.x && other.y == y;
         }
       }
 

@@ -6,7 +6,7 @@ package LinkedList;
  * @author Mark
  * @param <E>
  */
-public class Node<E extends Comparable<E>> implements Cloneable, Comparable<Node<E>>{
+public class Node<E> implements Cloneable{
     private Node<E> Next;
     private Node<E> Prev;
     private E Value;
@@ -97,7 +97,8 @@ public class Node<E extends Comparable<E>> implements Cloneable, Comparable<Node
     }
 
     @Override
-    public int compareTo(Node<E> node){
-      return Value.compareTo(node.Value);
+    public boolean equals(Object obj){
+        final Node<E> other = (Node<E>) obj;
+        return Value.equals(other.Value);
     }
 }
