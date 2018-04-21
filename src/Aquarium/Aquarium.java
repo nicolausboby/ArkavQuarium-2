@@ -14,28 +14,50 @@ import Food.*;
  * @author regipurba
  */
 public class Aquarium {
-    private List<Fish> Fishes;
-    private List<Coin> Coins;
-    private List<Food> Foods;
-    Snail snail;
+    private LinkedList<Fish> Fishes;
+    private LinkedList<Coin> Coins;
+    private LinkedList<Food> Foods;
+    private Snail snail;
 
+    /**
+     * This constructs Aquarium and create new Fish, Coin, and etc.
+     */
     public Aquarium() {
-        
+        /**
+         * Initialize LinkedList of Fish, Coin, and etc
+         * Insert some fish, coin, food here!
+        */
     }
     
+    /**
+     * This returns snail object.
+     * @return Snail.
+     */
     public Snail getSnail(){
-        return this.snail;
+        return snail;
     }
     
-    public List<Fish> getFishes(){
-        return this.Fishes;
+    /**
+     * This returns LinkedList of Fish.
+     * @return LinkedList of Fish.
+     */
+    public LinkedList<Fish> getFishes(){
+        return Fishes;
     }
     
-    public List<Coin> getCoins(){
-        return this.Coins;
+    /**
+     * This returns LinkedList of Coins.
+     * @return LinkedList of Coin.
+     */
+    public LinkedList<Coin> getCoins(){
+        return Coins;
     }
     
-    public List<Food> getFood(){
-        return this.Foods;
+    /**
+     * This returns LinkedList of Food.
+     * @return LinkedList of Food.
+     */
+    public LinkedList<Food> getFood(){
+        return Foods;
     }
 }
