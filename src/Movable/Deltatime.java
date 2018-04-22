@@ -6,9 +6,9 @@ package Movable;
 
 /**
  *
- * @author asus
+ * @author Uslaconi
  */
-public class Deltatime{
+public class Deltatime extends Thread{
     //Get the system time
     long lastTime = System.nanoTime();
     //Specify how many seconds there are in a minute as a double
@@ -17,8 +17,14 @@ public class Deltatime{
     //Set definition of how many ticks per 1000000000 ns or 1 sec
     double ns = 1000000000 / ticks;    
     double delta = 0;
+    private Thread t;
     
-    public Deltatime(){
+    public double getDeltatime() {
+        return this.delta;
+    }
+    
+    @Override
+    public void run() {
         while (true){
             //Update the time
             long now = System.nanoTime();
@@ -34,8 +40,24 @@ public class Deltatime{
             }
         }
     }
-
-    public double getDeltatime() {
-        return this.delta;
+    @Override
+    public void start(){
+        if (t == null) {
+            t = new Thread (this);
+            t.start ();
+        }
     }
+
+//    public static void main (String[] args){
+//        Deltatime a = new Deltatime();
+//        a.start();
+//        a.run();
+//        System.out.println("deltatime : "+ a.getDeltatime());
+//        try {
+//            a.sleep(900);
+//        } catch (Exception e){
+//            System.out.println(e);
+//        }
+//        System.out.println("deltatime : "+ a.getDeltatime());
+//    }
 }
