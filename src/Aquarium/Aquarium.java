@@ -21,13 +21,29 @@ public class Aquarium {
 
     /**
      * This constructs Aquarium and create new Fish, Coin, and etc.
+     * @param height Height of window.
+     * @param width Width of window. 
      */
-    public Aquarium() {
+    public Aquarium(int height, int width) {
         /**
          * LinkedList of Fish, Coin, and etc
          * Insert some fish, coin, food here!
-         * sudahkah engkau menerima
         */
+        
+        Fishes = new LinkedList<>();
+        Coins = new LinkedList<>();
+        Foods = new LinkedList<>();
+        snail = new Snail(height, width);
+        
+        Guppy guppy = new Guppy();
+        guppy.setX((int)(Math.random() * ((width - 40)+1)) + 40); //random X
+	guppy.setY((int)(Math.random() * ((height - 115)+1)) + 115); //random Y
+	Fishes.add(guppy);
+        
+        Guppy guppy2 = new Guppy();
+        guppy.setX((int)(Math.random() * ((width - 40)+1)) + 40); //random X
+	guppy.setY((int)(Math.random() * ((height - 115)+1)) + 115); //random Y
+	Fishes.add(guppy2);
     }
     
     /**
