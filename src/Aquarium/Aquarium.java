@@ -26,6 +26,7 @@ public class Aquarium {
         /**
          * LinkedList of Fish, Coin, and etc
          * Insert some fish, coin, food here!
+         * sudahkah engkau menerima
         */
     }
     
