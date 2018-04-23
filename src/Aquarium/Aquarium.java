@@ -26,7 +26,7 @@ public class Aquarium {
      */
     public Aquarium(int height, int width) {
         /**
-         * Initialize LinkedList of Fish, Coin, and etc
+         * LinkedList of Fish, Coin, and etc
          * Insert some fish, coin, food here!
         */
         
