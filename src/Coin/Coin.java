@@ -16,21 +16,44 @@ public class Coin{
     private long value;
     private Location location;
     
+    
+    public Coin(){
+        value = 0;
+        statePic = 0;
+        location.setX(0);
+        location.setY(0);
+    } 
+    
+    public Coin(int value, int x, int y){
+        location.setX(x);
+        location.setY(y);
+        this.value = value;
+        statePic = 0;
+    }
+    
+    public void setX(int x){location.setX(x);}
+    public void setY(int y){location.setY(y);}
+    public int getX(){return location.getX();}
+    public int getY(){return location.getY();}
+    
     //void Move(double deltatime); //Selalu move ke bawah
     
     public long getValue(){
-        return this.value;
+        return value;
     }
+    
     public void setValue(long v) {
-        this.value = v;
+        value = v;
     }
+    
     public void printCoin(String[] s){
         
     }
+    
     public int getStatePic(){
-        return this.statePic;
+        return statePic;
     }
     public void setStatePic(int sp){
-        this.statePic = sp;
+        statePic = sp;
     }
 }
