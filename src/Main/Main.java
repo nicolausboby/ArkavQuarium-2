@@ -39,12 +39,11 @@ public class Main extends JApplet {
                 }
                 
                 JFrame frame = new JFrame("ArkavQuarium Java Version");
-                ImageIcon background = new ImageIcon(new ImageIcon("D:\\Tugas\\Java ArkavQuarium\\ArkavQuarium-2\\assets\\backgrounds\\aquarium1.jpg").getImage().getScaledInstance(JFXPANEL_WIDTH_INT,JFXPANEL_HEIGHT_INT,Image.SCALE_DEFAULT));
-                ImageIcon iconMenu = new ImageIcon("D:\\Tugas\\Java ArkavQuarium\\ArkavQuarium-2\\assets\\assets\\Others\\MenuBar.gif");
+                ImageIcon background = new ImageIcon(new ImageIcon("..\\assets\\Aquarium\\aquarium1.jpg").getImage().getScaledInstance(JFXPANEL_WIDTH_INT,JFXPANEL_HEIGHT_INT,Image.SCALE_DEFAULT));
+                ImageIcon iconMenu = new ImageIcon("..\\..\\assets\\assets\\Others\\MenuBar.gif");
                 JLabel labelBackground = new JLabel(background);
                 JLabel labelIconMenu = new JLabel(iconMenu);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                
                 JApplet applet = new Main();
                 applet.init();
                 frame.setContentPane(applet.getContentPane());            

@@ -46,11 +46,12 @@ public class AquariumTest {
      */
     @Test
     public void testGetSnail() {
-        System.out.println("getSnail");
-        Aquarium instance = new Aquarium(5,6);
-        Snail expResult = new Snail(5,6);
+        System.out.println("getSnail() test");
+        Aquarium instance = new Aquarium(640,480);
+//        Snail expResult = new Snail(640,480);
         Snail result = instance.getSnail();
-        assertEquals(expResult, result);
+        if (result == null && result.getX() != 640 && result.getY() != 480)
+            fail("Fail test!");
     }
 
     /**
@@ -58,11 +59,12 @@ public class AquariumTest {
      */
     @Test
     public void testGetFishes() {
-        System.out.println("getFishes");
+        System.out.println("getFishes() test");
         Aquarium instance = new Aquarium(640,480);
         LinkedList<Fish> expResult = new LinkedList<>();
         LinkedList<Fish> result = instance.getFishes();
-        assertEquals(expResult, result);
+        if (result == null)
+            fail("Fail test!");
     }
 
     /**
@@ -70,11 +72,12 @@ public class AquariumTest {
      */
     @Test
     public void testGetCoins() {
-        System.out.println("getCoins");
-        Aquarium instance = null;
-        LinkedList<Coin> expResult = null;
+        System.out.println("getCoins() test");
+        Aquarium instance = new Aquarium(640,480);
+        LinkedList<Coin> expResult = new LinkedList<>();
         LinkedList<Coin> result = instance.getCoins();
-        assertEquals(expResult, result);
+        if (result == null)
+            fail("Fail test!");
     }
 
     /**
@@ -82,11 +85,12 @@ public class AquariumTest {
      */
     @Test
     public void testGetFood() {
-        System.out.println("getFood");
-        Aquarium instance = null;
-        LinkedList<Food> expResult = null;
+        System.out.println("getFood() test");
+        Aquarium instance = new Aquarium(640,480);
+        LinkedList<Food> expResult = new LinkedList<>();
         LinkedList<Food> result = instance.getFood();
-        assertEquals(expResult, result);
+         if (result == null)
+            fail("Fail test!");
     }
     
 }
