@@ -18,8 +18,8 @@ import javax.swing.UIManager;
 
 public class Main extends JApplet {
     
-    public static int JFXPANEL_WIDTH_INT = 600;
-    public static int JFXPANEL_HEIGHT_INT = 800;
+    public static int JFXPANEL_WIDTH_INT = 800;
+    public static int JFXPANEL_HEIGHT_INT = 600;
     private static JFXPanel fxContainer;
 
     /**
@@ -35,7 +35,7 @@ public class Main extends JApplet {
                 } catch (Exception e) {
                 }
                 
-                JFrame frame = new JFrame("JavaFX 2 in Swing");
+                JFrame frame = new JFrame("ArkavQuarium Java Version");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 
                 JApplet applet = new Main();
