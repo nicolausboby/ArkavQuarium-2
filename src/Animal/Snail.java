@@ -144,5 +144,10 @@ public class Snail {
      * This method print current snail.
      * @param pics pics path.
      */
-    public void printSnail(String[] pics){}
+    public void printSnail(String[] pics){
+        if(this.directionTo < 270 && this.directionTo > 90){
+            
+        }
+            
+    }
 }
