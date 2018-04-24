@@ -4,6 +4,7 @@ import Animal.*;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.Image;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
@@ -39,7 +40,7 @@ public class Main extends JApplet {
                 
                 JFrame frame = new JFrame("ArkavQuarium Java Version");
                 ImageIcon background;
-                background = new ImageIcon("D:\\Tugas\\Java ArkavQuarium\\ArkavQuarium-2\\assets\\backgrounds\\aquarium1.jpg");
+                background = new ImageIcon(new ImageIcon("D:\\Tugas\\Java ArkavQuarium\\ArkavQuarium-2\\assets\\backgrounds\\aquarium1.jpg").getImage().getScaledInstance(JFXPANEL_WIDTH_INT,JFXPANEL_HEIGHT_INT,Image.SCALE_DEFAULT));
                 JLabel label = new JLabel(background);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 
