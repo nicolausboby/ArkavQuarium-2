@@ -6,12 +6,17 @@ package Animal;
 
 import Coin.Coin;
 import Food.Food;
+import Printable.Printable;
+import java.net.MalformedURLException;
+import java.net.URL;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /**
  *
  * @author regipurba
  */
-public class Guppy extends Fish {
+public class Guppy extends Fish implements Printable{
 
     public static final int growTo2 = 3;
     public static final int growTo3 = 10;
@@ -21,6 +26,7 @@ public class Guppy extends Fish {
     private int nbFood;
     private double coinTime;
     public final double intervalGenerateCoin;
+    private String img;
 
     /**
      * This constructs guppy.
@@ -31,6 +37,7 @@ public class Guppy extends Fish {
         growLevel = 1;
         coinTime = 0;
         intervalGenerateCoin = 22000;
+        img = "..\\..\\assets\\Guppy\\Guppy1Swam.gif";
     }
 
     /**
@@ -84,7 +91,7 @@ public class Guppy extends Fish {
             case 2: //Level 2
                 coin = new Coin(SILVER, getX(), getY());
                 break;
-            case 3: //Level 3
+            default: //Level 3
                 coin = new Coin(GOLD, getX(), getY());
         }
         return coin;
@@ -110,9 +117,14 @@ public class Guppy extends Fish {
 
     /**
      * This method prints current guppy.
-     * @param s pics path.
+     * @param img
+     * @return JLabel
+     * @throws java.net.MalformedURLException
      */
     @Override
-    public void printFish(String[] s) {
+    public JLabel print(String img) throws MalformedURLException {
+        URL url = new URL(img);
+        ImageIcon icon = new ImageIcon(url);
+        return new JLabel(icon);
     }
 }

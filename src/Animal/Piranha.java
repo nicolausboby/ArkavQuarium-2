@@ -7,14 +7,21 @@ package Animal;
 import Coin.Coin;
 import LinkedList.Node;
 import LinkedList.LinkedList;
+import Printable.Printable;
+import java.net.MalformedURLException;
+import java.net.URL;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /**
  *
  * @author regipurba
+ * @author Uslaconi
  */
-public class Piranha extends Fish {
+public class Piranha extends Fish implements Printable{
     private int eatAtLevel; 
     public static final int PRC_GUPPY = 100;
+    private String img;
     
     /**
      * This construct piranha object with no parameter.
@@ -41,29 +48,6 @@ public class Piranha extends Fish {
         Coin coin = new Coin(PRC_GUPPY * (eatAtLevel + 1), super.getX(),super.getY());
         eatAtLevel = -999;
         return coin;
-    }
-
-    /**
-     * This method prints current Piranha.
-     * @param s pics path.
-     */
-    @Override
-    public void printFish(String[] s) {
-//         if (getIsFull() && (getDirectionTo() > 90 && getDirectionTo() < 270)) {
-//            draw_image(piranhaNormal[getStateGambar() + 10], getX(), getY());
-//        } else if (getIsFull() && (getDirectionTo() <= 90 || getDirectionTo() >= 270)) {
-//            draw_image(piranhaNormal[getStateGambar() + 20], getX(), getY());
-//        } else if (!getIsFull() && (getDirectionTo() > 90 && getDirectionTo() < 270)) {
-//            draw_image(piranhaNormal[getStateGambar() + 30], getX(), getY());
-//        } else if (!getIsFull() && (getDirectionTo() <= 90 || getDirectionTo() >= 270)) {
-//            draw_image(piranhaNormal[getStateGambar() + 40], getX(), getY());
-//        }
-//
-//        if (getStateGambar() != 9) {
-//            setStateGambar(getStateGambar() + 1);
-//        } else {
-//            setStateGambar(0);
-//        }
     }
 
     /**
@@ -131,5 +115,18 @@ public class Piranha extends Fish {
      */
     public void setEatAtLevel(int eatAtLevel) {
         this.eatAtLevel = eatAtLevel;
+    }
+    
+    /**
+     * This method prints current guppy.
+     * @param img
+     * @return JLabel
+     * @throws java.net.MalformedURLException
+     */
+    @Override
+    public JLabel print(String img) throws MalformedURLException {
+        URL url = new URL(img);
+        ImageIcon icon = new ImageIcon(url);
+        return new JLabel(icon);
     }
 }
