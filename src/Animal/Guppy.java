@@ -84,7 +84,7 @@ public class Guppy extends Fish {
             case 2: //Level 2
                 coin = new Coin(SILVER, getX(), getY());
                 break;
-            default: //Level 3
+            case 3: //Level 3
                 coin = new Coin(GOLD, getX(), getY());
         }
         return coin;

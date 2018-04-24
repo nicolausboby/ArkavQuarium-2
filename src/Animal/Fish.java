@@ -33,6 +33,7 @@ public abstract class Fish extends Thread implements Movable {
      * @param id
      */
     public Fish(int id) {
+        location = new Location();
         isFull = true;
         statePic = 0;
         hungerTime = INTERVAL_TO_FULL;

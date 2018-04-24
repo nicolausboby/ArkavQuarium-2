@@ -51,8 +51,6 @@ public class AquariumTest {
         Snail expResult = new Snail(5,6);
         Snail result = instance.getSnail();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -65,8 +63,6 @@ public class AquariumTest {
         LinkedList<Fish> expResult = null;
         LinkedList<Fish> result = instance.getFishes();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -79,8 +75,6 @@ public class AquariumTest {
         LinkedList<Coin> expResult = null;
         LinkedList<Coin> result = instance.getCoins();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -93,8 +87,6 @@ public class AquariumTest {
         LinkedList<Food> expResult = null;
         LinkedList<Food> result = instance.getFood();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
