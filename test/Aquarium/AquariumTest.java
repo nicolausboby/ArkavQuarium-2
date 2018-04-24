@@ -47,8 +47,8 @@ public class AquariumTest {
     @Test
     public void testGetSnail() {
         System.out.println("getSnail");
-        Aquarium instance = null;
-        Snail expResult = null;
+        Aquarium instance = new Aquarium(5,6);
+        Snail expResult = new Snail(5,6);
         Snail result = instance.getSnail();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

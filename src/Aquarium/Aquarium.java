@@ -45,6 +45,10 @@ public class Aquarium {
 	guppy.setY((int)(Math.random() * ((height - 115)+1)) + 115); //random Y
 	Fishes.add(guppy2);
     }
+
+    public Aquarium() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     /**
      * This returns snail object.

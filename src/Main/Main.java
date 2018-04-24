@@ -15,6 +15,7 @@ import javax.swing.JApplet;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 public class Main extends JApplet {
     
@@ -27,12 +28,11 @@ public class Main extends JApplet {
      */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
-            
             @Override
             public void run() {
                 try {
                     UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
-                } catch (Exception e) {
+                } catch (ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException e) {
                 }
                 
                 JFrame frame = new JFrame("ArkavQuarium Java Version");
@@ -58,12 +58,8 @@ public class Main extends JApplet {
         fxContainer.setPreferredSize(new Dimension(JFXPANEL_WIDTH_INT, JFXPANEL_HEIGHT_INT));
         add(fxContainer, BorderLayout.CENTER);
         // create JavaFX scene
-        Platform.runLater(new Runnable() {
-            
-            @Override
-            public void run() {
-                createScene();
-            }
+        Platform.runLater(() -> {
+            this.createScene();
         });
     }
     
@@ -71,7 +67,6 @@ public class Main extends JApplet {
         Button btn = new Button();
         btn.setText("Say 'Hello World'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
-            
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("Hello World!");
@@ -81,5 +76,5 @@ public class Main extends JApplet {
         root.getChildren().add(btn);
         fxContainer.setScene(new Scene(root));
     }
-    
+     
 }
