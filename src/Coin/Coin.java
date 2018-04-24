@@ -33,11 +33,11 @@ public class Coin{
     	this.location.setY(0);
     }
     
-    public Coin(int x,int y) {
-    	this.statePic = 0;
-    	this.value = 0;
-    	this.location.setX(x);
-    	this.location.setY(y);
+    public Coin(int value, int x, int y){
+        location.setX(x);
+        location.setY(y);
+        this.value = value;
+        statePic = 0;
     }
     
     //Setter and Getter
