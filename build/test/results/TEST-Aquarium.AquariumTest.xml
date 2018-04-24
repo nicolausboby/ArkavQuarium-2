@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="4" failures="0" hostname="mark" name="Aquarium.AquariumTest" skipped="0" tests="4" time="0.156" timestamp="2018-04-24T12:52:03">
+<testsuite errors="0" failures="0" hostname="mark" name="Aquarium.AquariumTest" skipped="0" tests="4" time="0.082" timestamp="2018-04-24T14:00:05">
   <properties>
     <property name="netbeans.autoupdate.country" value="US" />
     <property name="javafx.binarycss" value="false" />
@@ -48,7 +48,7 @@
     <property name="user.name" value="mark" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Aquarium.AquariumTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/build/test/results/TEST-Aquarium.AquariumTest.xml crashfile=/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/build/junitvmwatcher8657232737249526061.properties propsfile=/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/build/junit2577641275041204860.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Aquarium.AquariumTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/build/test/results/TEST-Aquarium.AquariumTest.xml crashfile=/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/build/junitvmwatcher7400019504339323706.properties propsfile=/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/build/junit559752812465131752.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -86,7 +86,7 @@
     <property name="javac.debug" value="true" />
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="/" />
-    <property name="javac.includesfile.binary" value="/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/null2078839930" />
+    <property name="javac.includesfile.binary" value="/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/null2046740497" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="false" />
     <property name="javac.test.processorpath" value="/usr/lib/jvm/jdk-8u171-linux-x64/jdk1.8.0_171/jre/lib/javaws.jar:/usr/lib/jvm/jdk-8u171-linux-x64/jdk1.8.0_171/jre/lib/deploy.jar:/usr/lib/jvm/jdk-8u171-linux-x64/jdk1.8.0_171/jre/lib/plugin.jar:build/classes:/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/lib/junit_4/junit-4.12.jar:/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/lib/hamcrest/hamcrest-core-1.3.jar" />
@@ -98,7 +98,6 @@
     <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="/usr/local/netbeans-8.2/ide/docs/jaxb-api-doc.zip" />
-    <property name="org.openide.awt.SwingBrowserImpl.do-not-block-awt" value="false" />
     <property name="javac.includes.binary" value="/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/build/test/classes/Aquarium/AquariumTest.class" />
     <property name="ant.home" value="/usr/local/netbeans-8.2/extide/ant" />
     <property name="libs.junit_4.src" value="/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/lib/junit_4/junit-4.12-sources.jar" />
@@ -134,7 +133,7 @@
     <property name="manifest.available" value="true" />
     <property name="libs.spring-framework300.maven-pom" value="" />
     <property name="run.test.classpath" value="/usr/lib/jvm/jdk-8u171-linux-x64/jdk1.8.0_171/jre/lib/javaws.jar:/usr/lib/jvm/jdk-8u171-linux-x64/jdk1.8.0_171/jre/lib/deploy.jar:/usr/lib/jvm/jdk-8u171-linux-x64/jdk1.8.0_171/jre/lib/plugin.jar:build/classes:/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/lib/junit_4/junit-4.12.jar:/home/mark/Documents/Java Project/ArkavQuarium/ArkavQuarium-2/lib/hamcrest/hamcrest-core-1.3.jar:build/test/classes" />
-    <property name="ant.project.invoked-targets" value="debug-test" />
+    <property name="ant.project.invoked-targets" value="test-single" />
     <property name="test.binaryexcludes" value="" />
     <property name="libs.swing-layout.javadoc" value="/usr/local/netbeans-8.2/platform/docs/swing-layout-1.0.4-doc.zip" />
     <property name="sun.java2d.dpiaware" value="true" />
@@ -143,7 +142,6 @@
     <property name="https.nonProxyHosts" value="localhost|127.0.0.1|mark" />
     <property name="libs.PostgreSQLDriver.maven-pom" value="" />
     <property name="java.class.version" value="52.0" />
-    <property name="jpda.address" value="localhost:37533" />
     <property name="libs.hibernate4-persistencemodelgen.maven-pom" value="" />
     <property name="libs.eclipselink.javadoc" value="/usr/local/netbeans-8.2/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="user.properties.file" value="/home/mark/.netbeans/8.2/build.properties" />
@@ -332,7 +330,7 @@
     <property name="libs.hibernate4-support.maven-pom" value="" />
     <property name="javafx.deploy.allowoffline" value="true" />
     <property name="libs.JAXB-ENDORSED.classpath" value="/usr/local/netbeans-8.2/ide/modules/ext/jaxb/api/jaxb-api.jar" />
-    <property name="nb.internal.action.name" value="debug.single" />
+    <property name="nb.internal.action.name" value="run.single" />
     <property name="libs.eclipselink.classpath" value="/usr/local/netbeans-8.2/java/modules/ext/eclipselink/eclipselink.jar:/usr/local/netbeans-8.2/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/usr/local/netbeans-8.2/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.2.v20140319-9ad6abd.jar" />
     <property name="libs.beans-binding.javadoc" value="/usr/local/netbeans-8.2/java/docs/beansbinding-1.2.1-doc.zip" />
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
@@ -348,9 +346,9 @@
     <property name="libs.hibernate4-persistencemodelgen.classpath" value="/usr/local/netbeans-8.2/java/modules/ext/hibernate4/hibernate-jpamodelgen-4.3.1.Final.jar" />
     <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
     <property name="main.class" value="Main.Main" />
-    <property name="libs.CopyLibs.displayName" value="CopyLibs Task" />
-    <property name="build.dir" value="build" />
     <property name="libs.CopyLibs.src" value="" />
+    <property name="build.dir" value="build" />
+    <property name="libs.CopyLibs.displayName" value="CopyLibs Task" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
     <property name="file.encoding" value="UTF-8" />
     <property name="build.classes.excludes" value="**/*.java,**/*.form" />
@@ -359,34 +357,14 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
   </properties>
-  <testcase classname="Aquarium.AquariumTest" name="testGetCoins" time="0.018">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Aquarium.AquariumTest.testGetCoins(AquariumTest.java:76)
-</error>
-  </testcase>
-  <testcase classname="Aquarium.AquariumTest" name="testGetSnail" time="0.003">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Animal.Snail.&lt;init&gt;(Snail.java:32)
-	at Aquarium.Aquarium.&lt;init&gt;(Aquarium.java:36)
-	at Aquarium.AquariumTest.testGetSnail(AquariumTest.java:50)
-</error>
-  </testcase>
-  <testcase classname="Aquarium.AquariumTest" name="testGetFood" time="0.002">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Aquarium.AquariumTest.testGetFood(AquariumTest.java:88)
-</error>
-  </testcase>
-  <testcase classname="Aquarium.AquariumTest" name="testGetFishes" time="0.003">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at Animal.Snail.&lt;init&gt;(Snail.java:32)
-	at Aquarium.Aquarium.&lt;init&gt;(Aquarium.java:36)
-	at Aquarium.AquariumTest.testGetFishes(AquariumTest.java:62)
-</error>
-  </testcase>
-  <system-out><![CDATA[getCoins
-getSnail
-getFood
-getFishes
+  <testcase classname="Aquarium.AquariumTest" name="testGetCoins" time="0.005" />
+  <testcase classname="Aquarium.AquariumTest" name="testGetSnail" time="0.0" />
+  <testcase classname="Aquarium.AquariumTest" name="testGetFood" time="0.0" />
+  <testcase classname="Aquarium.AquariumTest" name="testGetFishes" time="0.001" />
+  <system-out><![CDATA[getCoins() test
+getSnail() test
+getFood() test
+getFishes() test
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
