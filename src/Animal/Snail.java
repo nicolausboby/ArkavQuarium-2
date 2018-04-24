@@ -26,6 +26,7 @@ public class Snail {
      * @param width Width of window.
      */
     public Snail(int height, int width){
+        location = new Location();
         directionTo = -1;
         amountCoin = 0;
         statePic = 0;

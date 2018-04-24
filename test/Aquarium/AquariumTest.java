@@ -59,8 +59,8 @@ public class AquariumTest {
     @Test
     public void testGetFishes() {
         System.out.println("getFishes");
-        Aquarium instance = null;
-        LinkedList<Fish> expResult = null;
+        Aquarium instance = new Aquarium(640,480);
+        LinkedList<Fish> expResult = new LinkedList<>();
         LinkedList<Fish> result = instance.getFishes();
         assertEquals(expResult, result);
     }

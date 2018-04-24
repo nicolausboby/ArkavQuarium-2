@@ -106,7 +106,7 @@ public class Food {
     }
 
     /**
-     * This returns attribut reachbottom in food.
+     * This returns attribute reachbottom in food.
      * @return reachbottom.
      */
     public boolean getIsReachBottom(){
