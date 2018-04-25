@@ -203,12 +203,6 @@ public abstract class Fish extends Thread implements Movable {
         return this.directionTo;
     }
     
-    /**
-     * This method prints current fish.
-     * @param s pics path.
-     */
-    public abstract void printFish(String[] s);
-    
     @Override
     public boolean equals(Object obj){
         final Fish fish = (Fish) obj;

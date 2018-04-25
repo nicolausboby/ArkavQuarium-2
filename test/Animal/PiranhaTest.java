@@ -66,17 +66,6 @@ public class PiranhaTest {
     }
 
     /**
-     * Test of printFish method, of class Piranha.
-     */
-    @Test
-    public void testPrintFish() {
-        System.out.println("printFish() test");
-        String[] s = {""};
-        Piranha instance = new Piranha();
-        instance.printFish(s);
-    }
-
-    /**
      * Test of findNearestFood method, of class Piranha.
      */
     @Test

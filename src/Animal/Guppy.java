@@ -127,9 +127,4 @@ public class Guppy extends Fish implements Printable{
         ImageIcon icon = new ImageIcon(url);
         return new JLabel(icon);
     }
-
-    @Override
-    public void printFish(String[] s) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

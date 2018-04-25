@@ -126,16 +126,4 @@ public class GuppyTest {
         Guppy instance = new Guppy();
         instance.Eat(food);
     }
-
-    /**
-     * Test of printFish method, of class Guppy.
-     */
-    @Test
-    public void testPrintFish() {
-        System.out.println("printFish");
-        String[] s = null;
-        Guppy instance = new Guppy();
-        instance.printFish(s);
-    }
-    
 }
