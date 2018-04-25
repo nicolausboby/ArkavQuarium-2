@@ -1,5 +1,4 @@
-package Main;
-
+/*package Main;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -25,15 +24,16 @@ class BgImage extends JFrame
     background.add(b1);
 */
 // Another way
-    setLayout(new BorderLayout());
-    setContentPane(new JLabel(new ImageIcon("D:\\Informatics\\OOP\\Tubes-Java\\ArkavQuarium-2-master\\assets\\aquarium3.jpg")));
+/*    setLayout(new BorderLayout());
+    setContentPane(new JLabel(new ImageIcon("aquarium2.jpg")));
     setLayout(new FlowLayout());
     // Just for refresh :) Not optional!
     setSize(801,600);
     setSize(800,600);
     }
-   /* public static void main(String args[])
+    public static void main(String args[])
     {
         new BgImage();
-    }*/
+    }
 } 
+*/

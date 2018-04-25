@@ -214,7 +214,7 @@ public class GUI extends JPanel {
 	    return bimage;
 	}
 	
-	private void main(String[] args) {
+	/*private void main(String[] args) {
 		new GUI();
-	}
+	}*/
 }
