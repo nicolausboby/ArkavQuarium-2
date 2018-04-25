@@ -4,7 +4,7 @@
  */
 package Aquarium;
 
-import java.util.*;
+import LinkedList.LinkedList;
 import Animal.*;
 import Coin.*;
 import Food.*;
